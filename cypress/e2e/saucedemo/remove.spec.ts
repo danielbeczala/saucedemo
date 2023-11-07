@@ -20,7 +20,7 @@ describe("Remove", () => {
       cy.get(
         `.inventory_item .inventory_item_name:contains(${product.name})`
       ).then(() => {
-        cy.clickRemoveButtonButton();
+        cy.clickRemoveButton();
         cy.getByTestDataLike("add-to-cart-")
           .contains("Add to cart")
           .should("be.visible");
@@ -44,7 +44,7 @@ describe("Remove", () => {
       cy.get(
         `.inventory_details .inventory_details_name:contains(${product.name})`
       ).then(() => {
-        cy.clickRemoveButtonButton();
+        cy.clickRemoveButton();
         cy.getByTestDataLike("add-to-cart-")
           .contains("Add to cart")
           .should("be.visible");

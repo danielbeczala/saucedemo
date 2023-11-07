@@ -84,7 +84,7 @@ Cypress.Commands.add("clickAddToCartButton", () => {
   cy.getByTestDataLike("add-to-cart-").contains("Add to cart").click();
 });
 
-Cypress.Commands.add("clickRemoveButtonButton", () => {
+Cypress.Commands.add("clickRemoveButton", () => {
   cy.getByTestDataLike("remove-").contains("Remove").click();
 });
 //
