@@ -16,7 +16,7 @@ describe("Checkout", () => {
   });
 
   beforeEach(() => {
-    cy.setLocalStorage("cart-contents", JSON.stringify([0, 1, 2, 3, 4, 5]));
+    cy.addProductsToCart([0, 1, 2, 3, 4, 5]);
     cy.loginByLocalStorage(Cypress.env("cart_url"));
     cy.url().should("include", Cypress.env("cart_url"));
   });
