@@ -14,7 +14,7 @@ describe("Add", () => {
       cy.get(
         `.inventory_item .inventory_item_name:contains(${product.name})`
       ).then(() => {
-        cy.getByTestDataLike("add-to-cart-").contains("Add to cart").click();
+        cy.clickAddToCartButton();
         cy.getByTestDataLike("remove-").contains("Remove").should("be.visible");
         cy.get(`.shopping_cart_badge:contains(${index + 1})`).should(
           "be.visible"
@@ -30,7 +30,7 @@ describe("Add", () => {
       cy.get(
         `.inventory_details .inventory_details_name:contains(${product.name})`
       ).then(() => {
-        cy.getByTestDataLike("add-to-cart-").contains("Add to cart").click();
+        cy.clickAddToCartButton();
         cy.getByTestDataLike("remove-").contains("Remove").should("be.visible");
         cy.get(`.shopping_cart_badge:contains(${index + 1})`).should(
           "be.visible"

@@ -79,6 +79,14 @@ Cypress.Commands.add("clickCancelButton", () => {
 Cypress.Commands.add("clickBackToProductsButton", () => {
   cy.getByTestData("back-to-products").click();
 });
+
+Cypress.Commands.add("clickAddToCartButton", () => {
+  cy.getByTestDataLike("add-to-cart-").contains("Add to cart").click();
+});
+
+Cypress.Commands.add("clickRemoveButtonButton", () => {
+  cy.getByTestDataLike("remove-").contains("Remove").click();
+});
 //
 //
 // -- This is a child command --

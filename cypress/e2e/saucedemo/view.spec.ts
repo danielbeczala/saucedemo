@@ -32,7 +32,8 @@ describe("View", () => {
         }
       });
 
-      cy.getByTestData("back-to-products").click();
+      cy.clickBackToProductsButton();
+      cy.url().should("include", Cypress.env("products_url"));
     });
   });
 });

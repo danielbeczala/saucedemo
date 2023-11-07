@@ -17,5 +17,7 @@ declare namespace Cypress {
         clickBackToProductsButton(): Chainable<any>;
         fillLoginForm(username: string, password: string): Chainable<any>;
         clickLoginButton(): Chainable<any>;
+        clickAddToCartButton(): Chainable<any>;
+        clickRemoveButtonButton(): Chainable<any>;
     }
   }

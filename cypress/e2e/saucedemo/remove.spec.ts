@@ -12,15 +12,15 @@ describe("Remove", () => {
   });
 
   it("Remove products from cart", () => {
+    cy.loginByLocalStorage(Cypress.env("products_url"));
+    cy.url().should("include", Cypress.env("products_url"));
     products.forEach((product, index) => {
       let count: number = index + 1;
       let productCount: number = products.length - count;
-      cy.loginByLocalStorage(Cypress.env("products_url"));
-      cy.url().should("include", Cypress.env("products_url"));
       cy.get(
         `.inventory_item .inventory_item_name:contains(${product.name})`
       ).then(() => {
-        cy.getByTestDataLike("remove-").contains("Remove").click();
+        cy.clickRemoveButtonButton();
         cy.getByTestDataLike("add-to-cart-")
           .contains("Add to cart")
           .should("be.visible");
@@ -44,7 +44,7 @@ describe("Remove", () => {
       cy.get(
         `.inventory_details .inventory_details_name:contains(${product.name})`
       ).then(() => {
-        cy.getByTestDataLike("remove-").contains("Remove").click();
+        cy.clickRemoveButtonButton();
         cy.getByTestDataLike("add-to-cart-")
           .contains("Add to cart")
           .should("be.visible");

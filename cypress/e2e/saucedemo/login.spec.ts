@@ -15,6 +15,7 @@ describe("Login", () => {
 
   beforeEach(() => {
     cy.navigateTo(Cypress.env("login_url"));
+    cy.url().should("include", Cypress.env("login_url"));
   });
 
   it("Login using standard user", () => {
