@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "zipCode": "12345"
+  },
+  {
+    "firstName": "Alice",
+    "lastName": "Brown",
+    "zipCode": "67890"
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Taylor",
+    "zipCode": "54321"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Miller",
+    "zipCode": "98765"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Wilson",
+    "zipCode": "13579"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Harris",
+    "zipCode": "24680"
+  }
+]

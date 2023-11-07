@@ -1,0 +1,21 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.4.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/faker": "^6.6.9",
+    "faker": "^6.6.6"
+  }
+}
